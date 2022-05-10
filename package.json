@@ -1,0 +1,20 @@
+{
+  "name": "moneytracker",
+  "version": "1.0.0",
+  "description": "To help manage the expenditure on monthly basis",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon react-scripts start",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Praveenraj3537/MoneyTracker.git"
+  },
+  "author": "Praveenraj Pattar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Praveenraj3537/MoneyTracker/issues"
+  },
+  "homepage": "https://github.com/Praveenraj3537/MoneyTracker#readme"
+}
