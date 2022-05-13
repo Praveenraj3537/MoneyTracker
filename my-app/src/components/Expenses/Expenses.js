@@ -1,7 +1,7 @@
-import ExpenseItems from "../ExpenseItems/ExpenseItems";
 import Card from "../Card/Card";
+import { ExpenseItems } from "../ExpenseItems/ExpenseItems";
 
-export function Expenses(props) {
+export const Expenses = (props) => {
   return (
     <Card className="expenses">
       <ExpenseItems
@@ -26,4 +26,4 @@ export function Expenses(props) {
       />
     </Card>
   );
-}
+};
