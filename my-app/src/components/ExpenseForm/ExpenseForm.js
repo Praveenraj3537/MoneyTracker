@@ -1,34 +1,51 @@
 import { useState } from "react";
 import "./ExpenseForm.css";
 export const ExpenseForm = (props) => {
+  /**
+   * Here props will help in taking arguments from parent component to child component.
+   * With help of props we can access all the parameters of the parent component.
+   *
+   */
   const [changeTitle, setChangeTitle] = useState("");
   const [changeAmount, setChangeAmount] = useState("");
   const [changeDate, setChangeDate] = useState("");
+  /**
+   * useState() is hook which helps in maintaining the state of DOM.
+   * If you want change any thing in the tree, React-DOM need to know that, there is change in the state of tree,
+   * upon which the changes will be reflected in the tree.
+   * Initially the state is made nil by useState("")
+   */
 
   const titleChangeHandler = (event) => {
     setChangeTitle(event.target.value);
-    // console.log(changeTitle);
   };
 
   const amountChangeHandler = (event) => {
     setChangeAmount(event.target.value);
-    // console.log(changeAmount);
   };
   const dateChangeHandler = (event) => {
     setChangeDate(event.target.value);
-    // console.log(changeDate);
   };
 
   const submitHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault(); //Help to prevent default submitting the form whenever button is clicked.
 
-    const expenseData = {
+    const expenseDataValue = {
+      /**
+       * This object is created to handle the current values of the state
+       */
       Title: changeTitle,
       Amount: changeAmount,
       Date: new Date(changeDate),
     };
-    props.onSaveFormData(expenseData);
-    setChangeTitle("");
+    props.onSaveFormData(expenseDataValue);
+    /**
+     * Here am calling listener function from parent component(NewExpense.js) as i have received as props,
+     * and then am passing the current data to parent components where ID is added from the parenet component and then it is executed there.
+     *
+     * NOTE: onSaveFormData is not execute in this file but in parent component(NewExpense.js).
+     */
+    setChangeTitle(""); //Here field values are made to reset to empty after clicking submit button.
     setChangeAmount("");
     setChangeDate("");
   };
