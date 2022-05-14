@@ -1,4 +1,5 @@
-import './Expenses.css'
+import React from "react";
+import "./Expenses.css";
 import { Card } from "../Card/Card";
 import { ExpenseItems } from "../ExpenseItems/ExpenseItems";
 

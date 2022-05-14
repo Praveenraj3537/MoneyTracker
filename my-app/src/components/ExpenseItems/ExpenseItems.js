@@ -1,3 +1,4 @@
+import React from "react";
 import "./ExpenseItems.css";
 import { ExpenseDate } from "../ExpenseDate/ExpenseDate";
 import { useState } from "react";

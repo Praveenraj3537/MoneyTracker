@@ -1,8 +1,10 @@
+import React from "react";
 import "./App.css";
 import { Expenses } from "./components/Expenses/Expenses";
-import {NewExpense} from "./components/NewExpense/NewExpense"
+import { NewExpense } from "./components/NewExpense/NewExpense";
+
 const App = () => {
-  const expenses = [
+  const expenses_ = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -28,10 +30,18 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseDataHandaler = (expense) => {
+    console.log("In App.js");
+    // const expensesData  = {
+    //   ...expenses_
+    // }
+    console.log((expense));
+  };
   return (
     <div>
-      <NewExpense />
-      <Expenses items={expenses} />
+      <NewExpense onAddExpenseData={addExpenseDataHandaler} />
+      <Expenses items={expenses_} />
     </div>
   );
 };

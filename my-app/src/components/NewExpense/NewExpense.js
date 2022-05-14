@@ -1,14 +1,17 @@
+import React from "react";
 import { ExpenseForm } from "../ExpenseForm/ExpenseForm";
 import "./NewExpense.css";
 import { v4 as uuidv4 } from "uuid";
 
-export const NewExpense = () => {
+export const NewExpense = (props) => {
   const formSaveDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
       Id: uuidv4(),
     };
-    console.log(expenseData);
+    console.log("From Expense form Before onAddExpenseData");
+    props.onAddExpenseData(expenseData);
+    console.log("From Expense form After onAddExpenseData");
   };
   return (
     <div className="new-expense">

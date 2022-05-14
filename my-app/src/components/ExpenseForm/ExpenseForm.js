@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import "./ExpenseForm.css";
 export const ExpenseForm = (props) => {
@@ -38,7 +39,9 @@ export const ExpenseForm = (props) => {
       Amount: changeAmount,
       Date: new Date(changeDate),
     };
+    console.log("From Expense form Before onSaveFormData");
     props.onSaveFormData(expenseDataValue);
+    console.log("From Expense form After onSaveFormData");
     /**
      * Here am calling listener function from parent component(NewExpense.js) as i have received as props,
      * and then am passing the current data to parent components where ID is added from the parenet component and then it is executed there.
