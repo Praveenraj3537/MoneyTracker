@@ -30,13 +30,11 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+  console.log(expenses_);
 
   const addExpenseDataHandaler = (expense) => {
     console.log("In App.js");
-    // const expensesData  = {
-    //   ...expenses_
-    // }
-    console.log((expense));
+    expenses_.push(expense)
   };
   return (
     <div>

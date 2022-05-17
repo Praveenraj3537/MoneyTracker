@@ -6,8 +6,8 @@ import { v4 as uuidv4 } from "uuid";
 export const NewExpense = (props) => {
   const formSaveDataHandler = (enteredExpenseData) => {
     const expenseData = {
-      ...enteredExpenseData,
-      Id: uuidv4(),
+      id: uuidv4(),
+      ...enteredExpenseData
     };
     console.log("From Expense form Before onAddExpenseData");
     props.onAddExpenseData(expenseData);

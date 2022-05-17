@@ -35,9 +35,9 @@ export const ExpenseForm = (props) => {
       /**
        * This object is created to handle the current values of the state
        */
-      Title: changeTitle,
-      Amount: changeAmount,
-      Date: new Date(changeDate),
+      title: changeTitle,
+      amount: changeAmount,
+      date: new Date(changeDate),
     };
     console.log("From Expense form Before onSaveFormData");
     props.onSaveFormData(expenseDataValue);
