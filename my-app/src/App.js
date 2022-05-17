@@ -4,7 +4,7 @@ import { Expenses } from "./components/Expenses/Expenses";
 import { NewExpense } from "./components/NewExpense/NewExpense";
 
 const App = () => {
-  const expenses_ = [
+  const expenses = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -30,16 +30,16 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-  console.log(expenses_);
+  console.log(expenses);
 
   const addExpenseDataHandaler = (expense) => {
     console.log("In App.js");
-    expenses_.push(expense)
+    expenses.push(expense)
   };
   return (
     <div>
       <NewExpense onAddExpenseData={addExpenseDataHandaler} />
-      <Expenses items={expenses_} />
+      <Expenses items={expenses} />
     </div>
   );
 };
